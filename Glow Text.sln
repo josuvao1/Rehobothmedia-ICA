@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Glow Text", "Glow Text\Glow Text.csproj", "{0DDA279C-9DCC-4610-BD5A-A3A6D232167E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D81D4D8C-9E60-43C0-BEED-7BAF1F856F24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebTemplate", "WebTemplate", "{90A6EDB9-0DE4-4DA1-AB27-DFAB47C4B010}"
+	ProjectSection(SolutionItems) = preProject
+		WebTemplate\AnimatedBackground.html = WebTemplate\AnimatedBackground.html
+		WebTemplate\AnimatedVideoLibrary.html = WebTemplate\AnimatedVideoLibrary.html
+		WebTemplate\Apst vs Pst.html = WebTemplate\Apst vs Pst.html
+		WebTemplate\Bible.html = WebTemplate\Bible.html
+		WebTemplate\Bible3.html = WebTemplate\Bible3.html
+		WebTemplate\Bible_.html = WebTemplate\Bible_.html
+		WebTemplate\BirthDay.html = WebTemplate\BirthDay.html
+		WebTemplate\GlowText.html = WebTemplate\GlowText.html
+		GreenScreen.html = GreenScreen.html
+		WebTemplate\header.html = WebTemplate\header.html
+		HTMLPage1.html = HTMLPage1.html
+		WebTemplate\LowerThird.css = WebTemplate\LowerThird.css
+		WebTemplate\LowerThird.html = WebTemplate\LowerThird.html
+		WebTemplate\LowerThird2.html = WebTemplate\LowerThird2.html
+		WebTemplate\LowerThird3.html = WebTemplate\LowerThird3.html
+		WebTemplate\LowerThirdVideoLibrary.html = WebTemplate\LowerThirdVideoLibrary.html
+		WebTemplate\MotionBackground1.html = WebTemplate\MotionBackground1.html
+		WebTemplate\notice.css = WebTemplate\notice.css
+		WebTemplate\notice2.html = WebTemplate\notice2.html
+		WebTemplate\PointCurve.html = WebTemplate\PointCurve.html
+		WebTemplate\Points_Lower.html = WebTemplate\Points_Lower.html
+		WebTemplate\Points_LowerBox.html = WebTemplate\Points_LowerBox.html
+		WebTemplate\PointSimple.html = WebTemplate\PointSimple.html
+		WebTemplate\PotraitImage.html = WebTemplate\PotraitImage.html
+		WebTemplate\QuickNote.html = WebTemplate\QuickNote.html
+		WebTemplate\RehobothMedia.html = WebTemplate\RehobothMedia.html
+		WebTemplate\song.css = WebTemplate\song.css
+		WebTemplate\song.html = WebTemplate\song.html
+		WebTemplate\song2.css = WebTemplate\song2.css
+		WebTemplate\song3.css = WebTemplate\song3.css
+		WebTemplate\song3.html = WebTemplate\song3.html
+		WebTemplate\song4.css = WebTemplate\song4.css
+		WebTemplate\SongLive.html = WebTemplate\SongLive.html
+		WebTemplate\SongWithBackgroung.html = WebTemplate\SongWithBackgroung.html
+		StyleSheet1.css = StyleSheet1.css
+		WebTemplate\Transprentlogo.html = WebTemplate\Transprentlogo.html
+		WebTemplate\VideoTemplate.html = WebTemplate\VideoTemplate.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{4EA8F50A-1AE2-4F34-A4B5-2DD5A686AFF1}"
+	ProjectSection(SolutionItems) = preProject
+		WebTemplate\images\rh.jpg = WebTemplate\images\rh.jpg
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DDA279C-9DCC-4610-BD5A-A3A6D232167E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DDA279C-9DCC-4610-BD5A-A3A6D232167E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DDA279C-9DCC-4610-BD5A-A3A6D232167E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DDA279C-9DCC-4610-BD5A-A3A6D232167E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{90A6EDB9-0DE4-4DA1-AB27-DFAB47C4B010} = {D81D4D8C-9E60-43C0-BEED-7BAF1F856F24}
+		{4EA8F50A-1AE2-4F34-A4B5-2DD5A686AFF1} = {90A6EDB9-0DE4-4DA1-AB27-DFAB47C4B010}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C28CF3B8-5709-490F-BB5E-48C2926BD65D}
+	EndGlobalSection
+EndGlobal
