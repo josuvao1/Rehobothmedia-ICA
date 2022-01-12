@@ -1,0 +1,25 @@
+C:\Users\Samvel-Laptop\source\repos\Glow Text\Glow Text\bin\Release\Glow Text.exe.config
+C:\Users\Samvel-Laptop\source\repos\Glow Text\Glow Text\bin\Release\Glow Text.exe
+C:\Users\Samvel-Laptop\source\repos\Glow Text\Glow Text\bin\Release\Glow Text.pdb
+C:\Users\Samvel-Laptop\source\repos\Glow Text\Glow Text\bin\Release\System.Management.Automation.dll
+C:\Users\Samvel-Laptop\source\repos\Glow Text\Glow Text\obj\Release\Glow_Text.RehobothMedia.resources
+C:\Users\Samvel-Laptop\source\repos\Glow Text\Glow Text\obj\Release\Glow Text.csproj.GenerateResource.cache
+C:\Users\Samvel-Laptop\source\repos\Glow Text\Glow Text\obj\Release\Glow Text.csproj.CoreCompileInputs.cache
+C:\Users\Samvel-Laptop\source\repos\Glow Text\Glow Text\obj\Release\Glow Text.csproj.CopyComplete
+C:\Users\Samvel-Laptop\source\repos\Glow Text\Glow Text\obj\Release\Glow Text.exe
+C:\Users\Samvel-Laptop\source\repos\Glow Text\Glow Text\obj\Release\Glow Text.pdb
+C:\Users\Samvel-Laptop\source\repos\Glow Text\Glow Text\obj\Release\Glow Text.csprojAssemblyReference.cache
+C:\Users\Samvel-Laptop\source\repos\Glow Text\Glow Text\obj\Release\Glow Text.csproj.ResolveComReference.cache
+C:\Users\Samvel-Laptop\source\repos\RehobothMedia\Glow Text\bin\Release\Glow Text.exe.config
+C:\Users\Samvel-Laptop\source\repos\RehobothMedia\Glow Text\bin\Release\Glow Text.exe
+C:\Users\Samvel-Laptop\source\repos\RehobothMedia\Glow Text\bin\Release\Glow Text.pdb
+C:\Users\Samvel-Laptop\source\repos\RehobothMedia\Glow Text\bin\Release\System.Management.Automation.dll
+C:\Users\Samvel-Laptop\source\repos\RehobothMedia\Glow Text\obj\Release\Glow Text.csprojAssemblyReference.cache
+C:\Users\Samvel-Laptop\source\repos\RehobothMedia\Glow Text\obj\Release\Glow Text.csproj.ResolveComReference.cache
+C:\Users\Samvel-Laptop\source\repos\RehobothMedia\Glow Text\obj\Release\Glow_Text.RehobothMedia.resources
+C:\Users\Samvel-Laptop\source\repos\RehobothMedia\Glow Text\obj\Release\Glow Text.csproj.GenerateResource.cache
+C:\Users\Samvel-Laptop\source\repos\RehobothMedia\Glow Text\obj\Release\Glow Text.csproj.CoreCompileInputs.cache
+C:\Users\Samvel-Laptop\source\repos\RehobothMedia\Glow Text\obj\Release\Glow Text.csproj.CopyComplete
+C:\Users\Samvel-Laptop\source\repos\RehobothMedia\Glow Text\obj\Release\Glow Text.exe
+C:\Users\Samvel-Laptop\source\repos\RehobothMedia\Glow Text\obj\Release\Glow Text.pdb
+C:\Users\Samvel-Laptop\source\repos\RehobothMedia\Glow Text\obj\Release\Glow_Text.Properties.Resources.resources
