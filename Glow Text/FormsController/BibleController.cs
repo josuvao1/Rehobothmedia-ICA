@@ -17,6 +17,7 @@ namespace Glow_Text
        // static string ApplicationUrl = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location).Replace(@"Glow Text\bin\Debug", "");
         string ApplicationUrl = Path.GetFullPath(Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), @"..\..\..\"));
         string bibleVersion = "tamilBible";
+
         private void bibleBook_SelectedIndexChanged(object sender, EventArgs e)
         {
 
