@@ -23,3 +23,17 @@ C:\Users\Samvel-Laptop\source\repos\RehobothMedia\Glow Text\obj\Release\Glow Tex
 C:\Users\Samvel-Laptop\source\repos\RehobothMedia\Glow Text\obj\Release\Glow Text.exe
 C:\Users\Samvel-Laptop\source\repos\RehobothMedia\Glow Text\obj\Release\Glow Text.pdb
 C:\Users\Samvel-Laptop\source\repos\RehobothMedia\Glow Text\obj\Release\Glow_Text.Properties.Resources.resources
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\bin\Release\Glow Text.exe.config
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\bin\Release\Glow Text.exe
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\bin\Release\Glow Text.pdb
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\bin\Release\System.Management.Automation.dll
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\obj\Release\Glow Text.csproj.AssemblyReference.cache
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\obj\Release\Glow Text.exe.config
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\obj\Release\Glow Text.csproj.ResolveComReference.cache
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\obj\Release\Glow_Text.RehobothMedia.resources
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\obj\Release\Glow_Text.Properties.Resources.resources
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\obj\Release\Glow Text.csproj.GenerateResource.cache
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\obj\Release\Glow Text.csproj.CoreCompileInputs.cache
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\obj\Release\Glow Text.csproj.Up2Date
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\obj\Release\Glow Text.exe
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\obj\Release\Glow Text.pdb

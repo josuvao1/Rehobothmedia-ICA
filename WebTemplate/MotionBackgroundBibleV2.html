@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lyrics Viewer - Glowing Particles</title>
+
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #0a1628;
+    }
+
+    /* Glowing particles - Cyan */
+    .particles-cyan {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .particles-cyan span {
+        position: absolute;
+        border-radius: 50%;
+        background: #00d4ff;
+        box-shadow: 
+            0 0 20px #00d4ff,
+            0 0 40px #00d4ff,
+            0 0 60px #00d4ff;
+        animation: float-particle 15s infinite ease-in-out;
+    }
+
+    /* Glowing particles - Pink/Magenta */
+    .particles-pink {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .particles-pink span {
+        position: absolute;
+        border-radius: 50%;
+        background: #ff0080;
+        box-shadow: 
+            0 0 20px #ff0080,
+            0 0 40px #ff0080,
+            0 0 60px #ff0080;
+        animation: float-particle 15s infinite ease-in-out;
+    }
+
+    /* Small particles - White */
+    .particles-white {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .particles-white span {
+        position: absolute;
+        border-radius: 50%;
+        background: #ffffff;
+        box-shadow: 0 0 10px #ffffff;
+        animation: float-particle 12s infinite ease-in-out;
+    }
+
+    @keyframes float-particle {
+        0%, 100% {
+            transform: translate(0, 0) scale(1);
+            opacity: 0.8;
+        }
+        25% {
+            transform: translate(30px, -50px) scale(1.1);
+            opacity: 1;
+        }
+        50% {
+            transform: translate(-20px, 30px) scale(0.9);
+            opacity: 0.6;
+        }
+        75% {
+            transform: translate(40px, 20px) scale(1.05);
+            opacity: 0.9;
+        }
+    }
+
+    /* Individual particle positioning and delays */
+    .particles-cyan span:nth-child(1) {
+        width: 30px;
+        height: 30px;
+        left: 10%;
+        top: 15%;
+        animation-delay: 0s;
+    }
+
+    .particles-cyan span:nth-child(2) {
+        width: 25px;
+        height: 25px;
+        left: 60%;
+        top: 8%;
+        animation-delay: 2s;
+    }
+
+    .particles-cyan span:nth-child(3) {
+        width: 35px;
+        height: 35px;
+        left: 85%;
+        top: 20%;
+        animation-delay: 4s;
+    }
+
+    .particles-cyan span:nth-child(4) {
+        width: 20px;
+        height: 20px;
+        left: 15%;
+        top: 65%;
+        animation-delay: 1s;
+    }
+
+    .particles-cyan span:nth-child(5) {
+        width: 28px;
+        height: 28px;
+        left: 75%;
+        top: 55%;
+        animation-delay: 3s;
+    }
+
+    .particles-cyan span:nth-child(6) {
+        width: 32px;
+        height: 32px;
+        left: 40%;
+        top: 30%;
+        animation-delay: 5s;
+    }
+
+    .particles-pink span:nth-child(1) {
+        width: 25px;
+        height: 25px;
+        left: 20%;
+        top: 25%;
+        animation-delay: 1.5s;
+    }
+
+    .particles-pink span:nth-child(2) {
+        width: 30px;
+        height: 30px;
+        left: 88%;
+        top: 12%;
+        animation-delay: 3.5s;
+    }
+
+    .particles-pink span:nth-child(3) {
+        width: 22px;
+        height: 22px;
+        left: 50%;
+        top: 40%;
+        animation-delay: 0.5s;
+    }
+
+    .particles-pink span:nth-child(4) {
+        width: 28px;
+        height: 28px;
+        left: 8%;
+        top: 50%;
+        animation-delay: 2.5s;
+    }
+
+    .particles-pink span:nth-child(5) {
+        width: 26px;
+        height: 26px;
+        left: 70%;
+        top: 75%;
+        animation-delay: 4.5s;
+    }
+
+    .particles-pink span:nth-child(6) {
+        width: 24px;
+        height: 24px;
+        left: 92%;
+        top: 60%;
+        animation-delay: 1.8s;
+    }
+
+    .particles-white span:nth-child(1) {
+        width: 8px;
+        height: 8px;
+        left: 25%;
+        top: 18%;
+        animation-delay: 0.8s;
+    }
+
+    .particles-white span:nth-child(2) {
+        width: 6px;
+        height: 6px;
+        left: 55%;
+        top: 22%;
+        animation-delay: 2.2s;
+    }
+
+    .particles-white span:nth-child(3) {
+        width: 7px;
+        height: 7px;
+        left: 80%;
+        top: 35%;
+        animation-delay: 3.8s;
+    }
+
+    .particles-white span:nth-child(4) {
+        width: 5px;
+        height: 5px;
+        left: 12%;
+        top: 78%;
+        animation-delay: 1.2s;
+    }
+
+    .particles-white span:nth-child(5) {
+        width: 8px;
+        height: 8px;
+        left: 45%;
+        top: 68%;
+        animation-delay: 4.2s;
+    }
+
+    .particles-white span:nth-child(6) {
+        width: 6px;
+        height: 6px;
+        left: 78%;
+        top: 82%;
+        animation-delay: 2.8s;
+    }
+
+    .particles-white span:nth-child(7) {
+        width: 7px;
+        height: 7px;
+        left: 33%;
+        top: 45%;
+        animation-delay: 0.5s;
+    }
+
+    .particles-white span:nth-child(8) {
+        width: 5px;
+        height: 5px;
+        left: 65%;
+        top: 28%;
+        animation-delay: 3.5s;
+    }
+
+    /* TEXT CONTAINER */
+    .content-wrapper {
+        position: absolute;
+        top: 7.5%;
+        left: 5%;
+        width: 90%;
+        height: 85%;
+        z-index: 10;
+    }
+
+    #lyricsText {
+        color: white;
+        font-weight: bold;
+        font-family: 'Bangers', cursive;
+        margin: 0;
+        padding: 0;
+        line-height: 1.3;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        text-align: center;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-shadow: 
+            0 0 10px rgba(0, 212, 255, 0.5),
+            2px 2px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .header-text {
+        color: #ffffff;
+        text-align: center;
+        font-size: xx-large;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-shadow: 
+            0 0 10px rgba(0, 212, 255, 0.5),
+            2px 2px 8px rgba(0, 0, 0, 0.8);
+    }
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+    <!-- Cyan glowing particles -->
+    <div class="particles-cyan">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Pink/Magenta glowing particles -->
+    <div class="particles-pink">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- Small white particles -->
+    <div class="particles-white">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="header-text">{{Header}}</div>
+        <div id="lyricsText">{{Lyrics}}</div>
+    </div>
+</div>
+
+<script>
+function autoScale() {
+    const textEl = document.getElementById("lyricsText");
+    const container = document.querySelector(".content-wrapper");
+    
+    if (!textEl || !container) return;
+    
+    const maxWidth = container.offsetWidth;
+    const maxHeight = container.offsetHeight;
+    
+    let minSize = 16;
+    let maxSize = 500;
+    let bestSize = minSize;
+    let iterations = 0;
+    
+    while (minSize <= maxSize && iterations < 20) {
+        const midSize = Math.floor((minSize + maxSize) / 2);
+        textEl.style.fontSize = midSize + 'px';
+        void textEl.offsetHeight;
+        
+        const actualWidth = textEl.offsetWidth;
+        const actualHeight = textEl.offsetHeight;
+        const fitsWidth = actualWidth <= maxWidth;
+        const fitsHeight = actualHeight <= maxHeight;
+        
+        if (fitsWidth && fitsHeight) {
+            bestSize = midSize;
+            minSize = midSize + 1;
+        } else {
+            maxSize = midSize - 1;
+        }
+        iterations++;
+    }
+    
+    const finalSize = Math.floor(bestSize * 0.97);
+    textEl.style.fontSize = finalSize + 'px';
+}
+
+window.addEventListener('load', function() {
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(function() {
+            setTimeout(autoScale, 100);
+        });
+    } else {
+        setTimeout(autoScale, 300);
+    }
+});
+
+window.addEventListener('resize', autoScale);
+</script>
+
+</body>
+</html>

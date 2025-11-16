@@ -9,6 +9,7 @@ namespace Glow_Text
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        System.Windows.Forms.TabControl Tab;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -31,7 +32,7 @@ namespace Glow_Text
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TabControl Tab;
+           // System.Windows.Forms.TabControl Tab;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RehobothMedia));
             this.SongTab = new System.Windows.Forms.TabPage();
             this.SongDropdownList = new System.Windows.Forms.ComboBox();
@@ -109,6 +110,7 @@ namespace Glow_Text
             this.PointOneText = new System.Windows.Forms.TextBox();
             this.HeaderText = new System.Windows.Forms.TextBox();
             this.BibleTab = new System.Windows.Forms.TabPage();
+            this.BibleLanguage = new System.Windows.Forms.CheckedListBox();
             this.BiblePreviewText = new System.Windows.Forms.TextBox();
             this.BiblePreview = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -205,11 +207,11 @@ namespace Glow_Text
             this.SongTab.Controls.Add(this.button18);
             this.SongTab.Controls.Add(this.button17);
             this.SongTab.Font = new System.Drawing.Font("Century", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SongTab.Location = new System.Drawing.Point(4, 26);
+            this.SongTab.Location = new System.Drawing.Point(4, 29);
             this.SongTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SongTab.Name = "SongTab";
             this.SongTab.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SongTab.Size = new System.Drawing.Size(1248, 530);
+            this.SongTab.Size = new System.Drawing.Size(1248, 527);
             this.SongTab.TabIndex = 0;
             this.SongTab.Text = "Song";
             this.SongTab.UseVisualStyleBackColor = true;
@@ -224,7 +226,7 @@ namespace Glow_Text
             this.SongDropdownList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SongDropdownList.MaxDropDownItems = 2;
             this.SongDropdownList.Name = "SongDropdownList";
-            this.SongDropdownList.Size = new System.Drawing.Size(810, 24);
+            this.SongDropdownList.Size = new System.Drawing.Size(810, 26);
             this.SongDropdownList.TabIndex = 38;
             this.SongDropdownList.SelectedIndexChanged += new System.EventHandler(this.SongDropdownList_SelectedIndexChanged);
             // 
@@ -582,11 +584,11 @@ namespace Glow_Text
             this.LowerThirdTab.Controls.Add(this.LowerThirdDropDown);
             this.LowerThirdTab.Controls.Add(this.AnimatedLowerThird);
             this.LowerThirdTab.Controls.Add(this.button38);
-            this.LowerThirdTab.Location = new System.Drawing.Point(4, 26);
+            this.LowerThirdTab.Location = new System.Drawing.Point(4, 29);
             this.LowerThirdTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LowerThirdTab.Name = "LowerThirdTab";
             this.LowerThirdTab.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.LowerThirdTab.Size = new System.Drawing.Size(1248, 530);
+            this.LowerThirdTab.Size = new System.Drawing.Size(1248, 527);
             this.LowerThirdTab.TabIndex = 1;
             this.LowerThirdTab.Text = "Over Lay";
             this.LowerThirdTab.Click += new System.EventHandler(this.tabPage2_Click);
@@ -616,7 +618,7 @@ namespace Glow_Text
             this.AnimatedVideoLibary2.FormattingEnabled = true;
             this.AnimatedVideoLibary2.Location = new System.Drawing.Point(563, 212);
             this.AnimatedVideoLibary2.Name = "AnimatedVideoLibary2";
-            this.AnimatedVideoLibary2.Size = new System.Drawing.Size(341, 25);
+            this.AnimatedVideoLibary2.Size = new System.Drawing.Size(341, 28);
             this.AnimatedVideoLibary2.TabIndex = 16;
             // 
             // PlayPauseButton
@@ -657,7 +659,7 @@ namespace Glow_Text
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(568, 37);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 17);
+            this.label4.Size = new System.Drawing.Size(150, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Video Library (mp4)";
             // 
@@ -666,7 +668,7 @@ namespace Glow_Text
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(76, 181);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(138, 17);
+            this.label5.Size = new System.Drawing.Size(168, 20);
             this.label5.TabIndex = 12;
             this.label5.Text = "Lower Third Animation";
             // 
@@ -688,7 +690,7 @@ namespace Glow_Text
             this.LowerThirdVideoLibrary.Location = new System.Drawing.Point(80, 212);
             this.LowerThirdVideoLibrary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LowerThirdVideoLibrary.Name = "LowerThirdVideoLibrary";
-            this.LowerThirdVideoLibrary.Size = new System.Drawing.Size(248, 25);
+            this.LowerThirdVideoLibrary.Size = new System.Drawing.Size(248, 28);
             this.LowerThirdVideoLibrary.TabIndex = 11;
             // 
             // Add_LowerThird
@@ -717,7 +719,7 @@ namespace Glow_Text
             this.LowerThirdAdd.Location = new System.Drawing.Point(79, 119);
             this.LowerThirdAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LowerThirdAdd.Name = "LowerThirdAdd";
-            this.LowerThirdAdd.Size = new System.Drawing.Size(249, 22);
+            this.LowerThirdAdd.Size = new System.Drawing.Size(249, 26);
             this.LowerThirdAdd.TabIndex = 4;
             // 
             // Remove_LowerThird
@@ -747,7 +749,7 @@ namespace Glow_Text
             this.LowerThird.AutoSize = true;
             this.LowerThird.Location = new System.Drawing.Point(76, 41);
             this.LowerThird.Name = "LowerThird";
-            this.LowerThird.Size = new System.Drawing.Size(104, 17);
+            this.LowerThird.Size = new System.Drawing.Size(127, 20);
             this.LowerThird.TabIndex = 1;
             this.LowerThird.Text = "Name of Pastors";
             // 
@@ -759,7 +761,7 @@ namespace Glow_Text
             this.LowerThirdDropDown.Location = new System.Drawing.Point(79, 73);
             this.LowerThirdDropDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LowerThirdDropDown.Name = "LowerThirdDropDown";
-            this.LowerThirdDropDown.Size = new System.Drawing.Size(249, 25);
+            this.LowerThirdDropDown.Size = new System.Drawing.Size(249, 28);
             this.LowerThirdDropDown.TabIndex = 19;
             this.LowerThirdDropDown.SelectedIndexChanged += new System.EventHandler(this.LowerThird_Dropdown);
             // 
@@ -773,7 +775,7 @@ namespace Glow_Text
             this.AnimatedLowerThird.Location = new System.Drawing.Point(563, 68);
             this.AnimatedLowerThird.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AnimatedLowerThird.Name = "AnimatedLowerThird";
-            this.AnimatedLowerThird.Size = new System.Drawing.Size(341, 23);
+            this.AnimatedLowerThird.Size = new System.Drawing.Size(341, 25);
             this.AnimatedLowerThird.TabIndex = 7;
             // 
             // button38
@@ -811,11 +813,11 @@ namespace Glow_Text
             this.PointTab.Controls.Add(this.PointTwoText);
             this.PointTab.Controls.Add(this.PointOneText);
             this.PointTab.Controls.Add(this.HeaderText);
-            this.PointTab.Location = new System.Drawing.Point(4, 26);
+            this.PointTab.Location = new System.Drawing.Point(4, 29);
             this.PointTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PointTab.Name = "PointTab";
             this.PointTab.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.PointTab.Size = new System.Drawing.Size(1248, 530);
+            this.PointTab.Size = new System.Drawing.Size(1248, 527);
             this.PointTab.TabIndex = 2;
             this.PointTab.Text = "Points";
             this.PointTab.UseVisualStyleBackColor = true;
@@ -845,7 +847,7 @@ namespace Glow_Text
             // 
             this.FontSize.Location = new System.Drawing.Point(570, 73);
             this.FontSize.Name = "FontSize";
-            this.FontSize.Size = new System.Drawing.Size(53, 22);
+            this.FontSize.Size = new System.Drawing.Size(53, 26);
             this.FontSize.TabIndex = 19;
             // 
             // Header
@@ -1037,11 +1039,12 @@ namespace Glow_Text
             this.HeaderText.Location = new System.Drawing.Point(213, 8);
             this.HeaderText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HeaderText.Name = "HeaderText";
-            this.HeaderText.Size = new System.Drawing.Size(789, 22);
+            this.HeaderText.Size = new System.Drawing.Size(789, 26);
             this.HeaderText.TabIndex = 0;
             // 
             // BibleTab
             // 
+            this.BibleTab.Controls.Add(this.BibleLanguage);
             this.BibleTab.Controls.Add(this.BiblePreviewText);
             this.BibleTab.Controls.Add(this.BiblePreview);
             this.BibleTab.Controls.Add(this.panel1);
@@ -1051,13 +1054,28 @@ namespace Glow_Text
             this.BibleTab.Controls.Add(this.Verse);
             this.BibleTab.Controls.Add(this.Chapter);
             this.BibleTab.Controls.Add(this.bibleBook);
-            this.BibleTab.Location = new System.Drawing.Point(4, 26);
+            this.BibleTab.Location = new System.Drawing.Point(4, 29);
             this.BibleTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BibleTab.Name = "BibleTab";
-            this.BibleTab.Size = new System.Drawing.Size(1248, 530);
+            this.BibleTab.Size = new System.Drawing.Size(1248, 527);
             this.BibleTab.TabIndex = 3;
             this.BibleTab.Text = "BibleVerse";
             this.BibleTab.UseVisualStyleBackColor = true;
+            // 
+            // checkedListBox1
+            // 
+            this.BibleLanguage.FormattingEnabled = true;
+            this.BibleLanguage.Items.AddRange(new object[] {
+            "marathiBible",
+            "hindiBible",
+              "englishBible",
+                "tamilBible"});
+            int index = this.BibleLanguage.Items.IndexOf("tamilBible");
+            this.BibleLanguage.SetItemChecked(index, true);
+            this.BibleLanguage.Location = new System.Drawing.Point(576, 9);
+            this.BibleLanguage.Name = "BibleLanguage";
+            this.BibleLanguage.Size = new System.Drawing.Size(120, 88);
+            this.BibleLanguage.TabIndex = 10;
             // 
             // BiblePreviewText
             // 
@@ -1065,15 +1083,15 @@ namespace Glow_Text
             this.BiblePreviewText.Location = new System.Drawing.Point(27, 229);
             this.BiblePreviewText.Multiline = true;
             this.BiblePreviewText.Name = "BiblePreviewText";
-            this.BiblePreviewText.Size = new System.Drawing.Size(728, 118);
+            this.BiblePreviewText.Size = new System.Drawing.Size(1194, 281);
             this.BiblePreviewText.TabIndex = 9;
             // 
             // BiblePreview
             // 
-            this.BiblePreview.Font = new System.Drawing.Font("Roboto Bk", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BiblePreview.Location = new System.Drawing.Point(22, 191);
+            this.BiblePreview.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BiblePreview.Location = new System.Drawing.Point(22, 204);
             this.BiblePreview.Name = "BiblePreview";
-            this.BiblePreview.Size = new System.Drawing.Size(855, 148);
+            this.BiblePreview.Size = new System.Drawing.Size(478, 135);
             this.BiblePreview.TabIndex = 8;
             this.BiblePreview.Text = "Bible Verse Preview";
             // 
@@ -1095,7 +1113,7 @@ namespace Glow_Text
             this.marathi.Location = new System.Drawing.Point(282, 7);
             this.marathi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.marathi.Name = "marathi";
-            this.marathi.Size = new System.Drawing.Size(72, 21);
+            this.marathi.Size = new System.Drawing.Size(87, 24);
             this.marathi.TabIndex = 3;
             this.marathi.TabStop = true;
             this.marathi.Text = "Marathi";
@@ -1108,7 +1126,7 @@ namespace Glow_Text
             this.radioButton3.Location = new System.Drawing.Point(208, 5);
             this.radioButton3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(55, 21);
+            this.radioButton3.Size = new System.Drawing.Size(65, 24);
             this.radioButton3.TabIndex = 2;
             this.radioButton3.Text = "Hindi";
             this.radioButton3.UseVisualStyleBackColor = true;
@@ -1120,7 +1138,7 @@ namespace Glow_Text
             this.radioButton2.Location = new System.Drawing.Point(96, 5);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(65, 21);
+            this.radioButton2.Size = new System.Drawing.Size(78, 24);
             this.radioButton2.TabIndex = 1;
             this.radioButton2.Text = "English";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -1133,7 +1151,7 @@ namespace Glow_Text
             this.tamil.Location = new System.Drawing.Point(5, 5);
             this.tamil.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tamil.Name = "tamil";
-            this.tamil.Size = new System.Drawing.Size(56, 21);
+            this.tamil.Size = new System.Drawing.Size(64, 24);
             this.tamil.TabIndex = 0;
             this.tamil.TabStop = true;
             this.tamil.Text = "Tamil";
@@ -1178,12 +1196,12 @@ namespace Glow_Text
             // 
             this.Verse.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.Verse.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.Verse.Font = new System.Drawing.Font("News706 BT", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Verse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Verse.FormattingEnabled = true;
             this.Verse.Location = new System.Drawing.Point(366, 81);
             this.Verse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Verse.Name = "Verse";
-            this.Verse.Size = new System.Drawing.Size(63, 23);
+            this.Verse.Size = new System.Drawing.Size(63, 28);
             this.Verse.TabIndex = 2;
             this.Verse.SelectedIndexChanged += new System.EventHandler(this.Verse_SelectedIndexChanged);
             // 
@@ -1191,12 +1209,12 @@ namespace Glow_Text
             // 
             this.Chapter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.Chapter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.Chapter.Font = new System.Drawing.Font("News706 BT", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Chapter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Chapter.FormattingEnabled = true;
             this.Chapter.Location = new System.Drawing.Point(276, 81);
             this.Chapter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Chapter.Name = "Chapter";
-            this.Chapter.Size = new System.Drawing.Size(70, 23);
+            this.Chapter.Size = new System.Drawing.Size(70, 28);
             this.Chapter.TabIndex = 1;
             this.Chapter.SelectedIndexChanged += new System.EventHandler(this.Chapter_SelectedIndexChanged);
             // 
@@ -1204,12 +1222,12 @@ namespace Glow_Text
             // 
             this.bibleBook.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.bibleBook.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.bibleBook.Font = new System.Drawing.Font("News706 BT", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bibleBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bibleBook.FormattingEnabled = true;
             this.bibleBook.Location = new System.Drawing.Point(22, 81);
             this.bibleBook.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bibleBook.Name = "bibleBook";
-            this.bibleBook.Size = new System.Drawing.Size(227, 23);
+            this.bibleBook.Size = new System.Drawing.Size(227, 28);
             this.bibleBook.TabIndex = 0;
             this.bibleBook.SelectedIndexChanged += new System.EventHandler(this.bibleBook_SelectedIndexChanged);
             // 
@@ -1225,11 +1243,11 @@ namespace Glow_Text
             this.BirthDayTab.Controls.Add(this.BirthdayDate);
             this.BirthDayTab.Controls.Add(this.button32);
             this.BirthDayTab.Controls.Add(this.BirthdayList);
-            this.BirthDayTab.Location = new System.Drawing.Point(4, 26);
+            this.BirthDayTab.Location = new System.Drawing.Point(4, 29);
             this.BirthDayTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BirthDayTab.Name = "BirthDayTab";
             this.BirthDayTab.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BirthDayTab.Size = new System.Drawing.Size(1248, 530);
+            this.BirthDayTab.Size = new System.Drawing.Size(1248, 527);
             this.BirthDayTab.TabIndex = 4;
             this.BirthDayTab.Text = "Birthday";
             this.BirthDayTab.UseVisualStyleBackColor = true;
@@ -1239,7 +1257,7 @@ namespace Glow_Text
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(768, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 17);
+            this.label2.Size = new System.Drawing.Size(107, 20);
             this.label2.TabIndex = 9;
             this.label2.Text = "Married Date";
             // 
@@ -1248,7 +1266,7 @@ namespace Glow_Text
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(541, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 17);
+            this.label1.Size = new System.Drawing.Size(111, 20);
             this.label1.TabIndex = 8;
             this.label1.Text = "Couple Name";
             // 
@@ -1286,7 +1304,7 @@ namespace Glow_Text
             this.BirthayDate.AutoSize = true;
             this.BirthayDate.Location = new System.Drawing.Point(275, 31);
             this.BirthayDate.Name = "BirthayDate";
-            this.BirthayDate.Size = new System.Drawing.Size(78, 17);
+            this.BirthayDate.Size = new System.Drawing.Size(94, 20);
             this.BirthayDate.TabIndex = 4;
             this.BirthayDate.Text = "BirthayDate";
             // 
@@ -1295,7 +1313,7 @@ namespace Glow_Text
             this.BirthdayName.AutoSize = true;
             this.BirthdayName.Location = new System.Drawing.Point(71, 31);
             this.BirthdayName.Name = "BirthdayName";
-            this.BirthdayName.Size = new System.Drawing.Size(92, 17);
+            this.BirthdayName.Size = new System.Drawing.Size(112, 20);
             this.BirthdayName.TabIndex = 3;
             this.BirthdayName.Text = "BirthdayName";
             // 
@@ -1357,10 +1375,11 @@ namespace Glow_Text
             this.Presentation.Location = new System.Drawing.Point(355, 23);
             this.Presentation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Presentation.Name = "Presentation";
-            this.Presentation.Size = new System.Drawing.Size(130, 20);
+            this.Presentation.Size = new System.Drawing.Size(161, 23);
             this.Presentation.TabIndex = 36;
             this.Presentation.Text = "Presentation Mode";
             this.Presentation.UseVisualStyleBackColor = true;
+            this.Presentation.CheckedChanged += new System.EventHandler(this.Presentation_CheckedChanged);
             // 
             // button1
             // 
@@ -1407,7 +1426,7 @@ namespace Glow_Text
             this.MainSelector.Location = new System.Drawing.Point(14, 21);
             this.MainSelector.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MainSelector.Name = "MainSelector";
-            this.MainSelector.Size = new System.Drawing.Size(165, 24);
+            this.MainSelector.Size = new System.Drawing.Size(165, 27);
             this.MainSelector.TabIndex = 39;
             this.MainSelector.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
@@ -1439,7 +1458,7 @@ namespace Glow_Text
             this.ImageDropDown.Location = new System.Drawing.Point(194, 21);
             this.ImageDropDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ImageDropDown.Name = "ImageDropDown";
-            this.ImageDropDown.Size = new System.Drawing.Size(153, 24);
+            this.ImageDropDown.Size = new System.Drawing.Size(153, 27);
             this.ImageDropDown.TabIndex = 43;
             // 
             // label3
@@ -1448,7 +1467,7 @@ namespace Glow_Text
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(194, 1);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 16);
+            this.label3.Size = new System.Drawing.Size(87, 19);
             this.label3.TabIndex = 44;
             this.label3.Text = "PNG Image";
             // 
@@ -1456,9 +1475,9 @@ namespace Glow_Text
             // 
             this.Potrait_Mode.AutoSize = true;
             this.Potrait_Mode.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Potrait_Mode.Location = new System.Drawing.Point(491, 23);
+            this.Potrait_Mode.Location = new System.Drawing.Point(536, 23);
             this.Potrait_Mode.Name = "Potrait_Mode";
-            this.Potrait_Mode.Size = new System.Drawing.Size(98, 20);
+            this.Potrait_Mode.Size = new System.Drawing.Size(120, 23);
             this.Potrait_Mode.TabIndex = 45;
             this.Potrait_Mode.Text = "Potrait Mode";
             this.Potrait_Mode.UseVisualStyleBackColor = true;
@@ -1466,7 +1485,7 @@ namespace Glow_Text
             // 
             // RehobothMedia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(32)))), ((int)(((byte)(46)))));
@@ -1630,6 +1649,7 @@ namespace Glow_Text
         private Button AddFontSize;
         private Button FontSizeMinus;
         private TextBox FontSize;
+        private CheckedListBox BibleLanguage;
     }
 }
 

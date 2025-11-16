@@ -14,4 +14,23 @@
     </div>
 
 </body>
+	<script>
+        // Function to check if .shadow p has only line breaks or is empty
+        function checkShadowContent() {
+            const pElement = document.querySelector('.shadow p');
+            const content = pElement.innerHTML.trim();
+            const shadowElement = document.querySelector(".shadow");
+
+            // Check if the content is only line breaks or empty
+            if (content === '' || content === '<b><br></b>' || content === '<b></br></b>') {
+				// shadowElement.classList.add('empty-content');
+				setTimeout(() => {
+                    shadowElement.classList.add('empty-content');
+                }, 250);
+            }
+        }
+
+        // Call the function on page load
+        document.addEventListener('DOMContentLoaded', checkShadowContent);
+    </script>
 </html>

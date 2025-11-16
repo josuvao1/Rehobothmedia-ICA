@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Glow_Text.Models;
 
 namespace Glow_Text
 {
@@ -205,6 +206,7 @@ namespace Glow_Text
         }
         private void ChoosLyrics()
         {
+            templateName = Presentation.Checked ? Constants.Presentation : Constants.Song;
             fileHelper.SaveasHtmlForSong(templateName, FinalHtmlModels[songCounter]);
             chromeHelper.RefreshChrome();
         }

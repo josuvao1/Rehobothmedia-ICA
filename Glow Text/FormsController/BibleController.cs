@@ -30,10 +30,15 @@ namespace Glow_Text
 
         private void BibleVerse()
         {
+            int Verse = VerseCounter;
             var bible = CallBibleOffline(Book: bibleBook.Text, Chapter: Chapter.Text, Verse: VerseCounter);
+            var prevVerse = CallBibleOffline(Book: bibleBook.Text, Chapter: Chapter.Text, Verse: Verse - 1);
+            var nextVerse = CallBibleOffline(Book: bibleBook.Text, Chapter: Chapter.Text, Verse: Verse + 1);
             if (bible.isVerseAvailable || String.IsNullOrEmpty(bible.Lyrics))
             {
-                BiblePreviewText.Text = bible.Lyrics.Replace("</span>",String.Empty);
+                BiblePreviewText.Text = (Verse - 1 == 0 ? "":$"{Verse - 1} - {prevVerse.Lyrics.Replace("</span>", String.Empty).Replace("<br /><br />", "\r\n")}") +
+                    $"{Verse} - {bible.Lyrics.Replace("</span>", String.Empty).Replace("<br /><br />", "\r\n")}"+
+                    $"{Verse+1} - {nextVerse.Lyrics.Replace("</span>", String.Empty).Replace("<br /><br />", "\r\n")}";
                 fileHelper.SaveasHtmlForBible(bible, MainSelector.Text);
             }
             else
@@ -140,44 +145,54 @@ namespace Glow_Text
             }
             Enum.TryParse(Book.Replace(" ", String.Empty), out BibleChapters BileChapter);
             var BileChapterIndex = (int)BileChapter + 1;
-            if (BileChapterIndex < 10)
+
+            List<string> BibleTemplate = new List<string>();
+            foreach (var item in BibleLanguage.CheckedItems)
             {
-                fileName = $"{ApplicationUrl}BibleDataBase\\{bibleVersion}\\0{BileChapterIndex}\\{Chapter}.htm";
+                if (BileChapterIndex < 10)
+                {
+                    fileName = $"{ApplicationUrl}BibleDataBase\\{item}\\0{BileChapterIndex}\\{Chapter}.htm";
+                }
+                else
+                {
+                    fileName = $"{ApplicationUrl}\\BibleDataBase\\{item}\\{BileChapterIndex}\\{Chapter}.htm";
+                }
+                BibleTemplate.Add($"{File.ReadAllText(fileName)}|{item}");
+               
             }
-            else
-            {
-                fileName = $"{ApplicationUrl}\\BibleDataBase\\{bibleVersion}\\{BileChapterIndex}\\{Chapter}.htm";
-            }
-            string BibleTemplate = File.ReadAllText($"{fileName}");
 
             HtmlModel BibleVerseModel;
-            VerseCounter = Verse;
+            //VerseCounter = Verse;
+            var bibleverse = "";
             try
             {
-                if (bibleVersion == "marathiBible")
+                foreach (var bibleText in BibleTemplate)
                 {
-                    var marResponseStringList = BibleTemplate.Replace($"id=\"{Verse}\"> {Verse}", "$").Split('$');
-                    var marResponseString = marResponseStringList[1].Replace("<br />", "$").Split('$');
-                    var marBibleVerseEndIndex = marResponseString[0].IndexOf("\r\n");
+                    var bibleVerse = bibleText.Split('|');
+                    if (bibleVerse[bibleVerse.Count() - 1] == "marathiBible")
+                    {
+                        var marResponseStringList = bibleVerse[0].Replace($"id=\"{Verse}\"> {Verse}", "$").Split('$');
+                        var marResponseString = marResponseStringList[1].Replace("<br />", "$").Split('$');
+                        var marBibleVerseEndIndex = marResponseString[0].IndexOf("\r\n");
+                        bibleverse = $"{marResponseString[0].Remove(marBibleVerseEndIndex)}<br /><br />{bibleverse}";
 
-                    var marBibleverse = marResponseString[0].Remove(marBibleVerseEndIndex);
-                    BibleVerseModel = new HtmlModel() { Header = $"{BibleBookTemp} {Chapter}: {Verse}", Lyrics = $"{marBibleverse}" };
-                    return BibleVerseModel;
+                    }
+                    else
+                    {
+                        var responseStringList = bibleVerse[0].Replace($"id=\"{Verse}\">{Verse}", "$").Split('$');
+                        var responseString = responseStringList[1].Replace("<br />", "$").Split('$');
+                        var bibleVerseEndIndex = responseString[0].IndexOf("\r\n");
+                        bibleverse = $"{responseString[0].Remove(bibleVerseEndIndex)}<br /><br />{bibleverse}";
+                    }
                 }
-                var responseStringList = BibleTemplate.Replace($"id=\"{Verse}\">{Verse}", "$").Split('$');
-                var responseString = responseStringList[1].Replace("<br />", "$").Split('$');
-                var bibleVerseEndIndex = responseString[0].IndexOf("\r\n");
-                var bibleverse = responseString[0].Remove(bibleVerseEndIndex);
-
-                BibleVerseModel = new HtmlModel() { Header = $"{BibleBookTemp} {Chapter}: {Verse}", Lyrics = $"{bibleverse}" };
-                return BibleVerseModel;
-
             }
             catch (Exception ex)
             {
                 BibleVerseModel = new HtmlModel() { Header = $"Verse Not Available", Lyrics = $"{ex.Message}", isVerseAvailable = false };
                 return BibleVerseModel;
             }
+            BibleVerseModel = new HtmlModel() { Header = $"{BibleBookTemp} {Chapter}: {Verse}", Lyrics = $"{bibleverse}" };
+            return BibleVerseModel;
         }
 
 

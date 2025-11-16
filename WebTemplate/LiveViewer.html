@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Song View</title>
+</head>
+<body id="software-live">
+  <!-- <div id="software-live"></div> -->
+  <script>
+    let lastContent = "";
+
+    function fetchContent() {
+      fetch("SongLive.html?_=" + new Date().getTime()) // prevent caching
+        .then(resp => resp.text())
+        .then(html => {
+          if (html !== lastContent) {
+            document.getElementById("software-live").innerHTML = html;
+            lastContent = html;
+              autoScale();
+			checkShadowContent();
+    
+          }
+        })
+        .catch(err => {
+          console.error("Failed to fetch software-live content:", err);
+        });
+    }
+	// Function to check if .shadow p has only line breaks or is empty
+	function checkShadowContent() {
+		const pElement = document.querySelector('.shadow p');
+        const content = pElement.innerHTML.trim();
+        const shadowElement = document.querySelector(".shadow");
+
+        // Check if the content is only line breaks or empty
+        if (content === '' || content === '<b><br></b>' || content === '<b></br></b>') {
+			// shadowElement.classList.add('empty-content');
+			setTimeout(() => {
+			shadowElement.classList.add('empty-content');
+			}, 250);
+        }
+	}
+    setInterval(fetchContent, 100); // every 1s
+    fetchContent(); // first load
+
+    function autoScale() {
+    console.log("autoScale started");
+    
+    const textEl = document.getElementById("lyricsText");
+    const container = document.querySelector(".content-wrapper");
+    
+    if (!textEl || !container) {
+        console.error('Elements not found');
+        return;
+    }
+    
+    const maxWidth = container.offsetWidth;
+    const maxHeight = container.offsetHeight;
+    
+    console.log('Container dimensions:', maxWidth, 'x', maxHeight);
+    
+    // Binary search bounds
+    let minSize = 16;
+    let maxSize = 500;
+    let bestSize = minSize;
+    let iterations = 0;
+    
+    // Binary search for optimal font size
+    while (minSize <= maxSize && iterations < 20) {
+        const midSize = Math.floor((minSize + maxSize) / 2);
+        textEl.style.fontSize = midSize + 'px';
+        
+        // Force browser reflow for accurate measurement
+        void textEl.offsetHeight;
+        
+        const actualWidth = textEl.offsetWidth;
+        const actualHeight = textEl.offsetHeight;
+        
+        const fitsWidth = actualWidth <= maxWidth;
+        const fitsHeight = actualHeight <= maxHeight;
+        
+        console.log(`Iteration ${iterations}: Testing ${midSize}px - Dims: ${actualWidth}x${actualHeight} - Fits: ${fitsWidth && fitsHeight}`);
+        
+        if (fitsWidth && fitsHeight) {
+            // Text fits, try larger
+            bestSize = midSize;
+            minSize = midSize + 1;
+        } else {
+            // Text doesn't fit, try smaller
+            maxSize = midSize - 1;
+        }
+        
+        iterations++;
+    }
+    
+    // Apply final size with 3% safety margin
+    const finalSize = Math.floor(bestSize * 0.97);
+    textEl.style.fontSize = finalSize + 'px';
+    
+    console.log(`Final size: ${finalSize}px (found in ${iterations} iterations)`);
+}
+
+
+// window.addEventListener('load', function() {
+//     // Wait for fonts to load
+//     debugger;
+//     if (document.fonts && document.fonts.ready) {
+//         document.fonts.ready.then(function() {
+//             setTimeout(autoScale, 100);
+//         });
+//     } else {
+//         setTimeout(autoScale, 300);
+//     }
+// });
+
+window.addEventListener('resize', autoScale);
+  </script>
+</body>
+</html>

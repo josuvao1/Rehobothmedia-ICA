@@ -2,17 +2,7 @@
     margin: 0;
     padding: 0;
     background: #4cff00;
-    /*background: #000;*/
-}
-
-.shadow p {
-    position: relative;
-    /*text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 4px 4px 0 #000;*/
-    text-shadow:
-    /* Outline 1 */
-     -5px -5px 0 #000, 5px -5px 0 #000, -5px 5px 0 #000, 5px 5px 0 #000;
-    color: #fff;
-    text-align: center;
+    /background: #000;/
 }
 
 @media screen and (max-width: 1920px) {
@@ -49,22 +39,50 @@
 @media screen and (max-width: 320px) {
 }
 
-.div-pd {
-    position: absolute;
-    right: 5%;
-    bottom: 6.5%;
-    left: 5%;
+.shadow p {
+    position: relative;
+    /text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 4px 4px 0 #000;/
+    text-shadow:
+    /* Outline 1 */
+     /* -2.5px -5px 0 #000, 5px -5px 0 #000, -5px 5px 0 #000, 5px 5px 0 #000; */
+     -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;
     color: #fff;
+    margin: 0;
+    padding: 10px 0px 20px 0px;
     text-align: center;
+	animation: fade-in 0.5s forwards;
+}
+.shadow.empty-content {
+    animation: fade-out 1s forwards;
+    background: #4cff00;
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade-out {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
 }
 
 .shadow {
-    font-size: 80px;
+    font-size: 2.5rem;
     position: absolute;
-    right: 5%;
-    bottom: 0%;
-    left: 5%;
-    margin: 200px auto 0;
+    width: 100%;
+    bottom: 7%;
+    background: #00000099;
     text-align: center;
+	overflow: hidden;
+	transition: background 1s;
     font-family: "Lobster", cursive;
 }

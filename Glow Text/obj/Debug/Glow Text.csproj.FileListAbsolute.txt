@@ -36,3 +36,31 @@ C:\RehobothMedia_Software\RehobothMedia\Glow Text\obj\Debug\Glow Text.csproj.Cor
 C:\RehobothMedia_Software\RehobothMedia\Glow Text\obj\Debug\Glow Text.csproj.CopyComplete
 C:\RehobothMedia_Software\RehobothMedia\Glow Text\obj\Debug\Glow Text.exe
 C:\RehobothMedia_Software\RehobothMedia\Glow Text\obj\Debug\Glow Text.pdb
+D:\Software Development\RehobothMedia\Glow Text\bin\Debug\Glow Text.exe.config
+D:\Software Development\RehobothMedia\Glow Text\bin\Debug\Glow Text.exe
+D:\Software Development\RehobothMedia\Glow Text\bin\Debug\Glow Text.pdb
+D:\Software Development\RehobothMedia\Glow Text\bin\Debug\System.Management.Automation.dll
+D:\Software Development\RehobothMedia\Glow Text\obj\Debug\Glow Text.csproj.AssemblyReference.cache
+D:\Software Development\RehobothMedia\Glow Text\obj\Debug\Glow Text.exe.config
+D:\Software Development\RehobothMedia\Glow Text\obj\Debug\Glow Text.csproj.ResolveComReference.cache
+D:\Software Development\RehobothMedia\Glow Text\obj\Debug\Glow_Text.RehobothMedia.resources
+D:\Software Development\RehobothMedia\Glow Text\obj\Debug\Glow_Text.Properties.Resources.resources
+D:\Software Development\RehobothMedia\Glow Text\obj\Debug\Glow Text.csproj.GenerateResource.cache
+D:\Software Development\RehobothMedia\Glow Text\obj\Debug\Glow Text.csproj.CoreCompileInputs.cache
+D:\Software Development\RehobothMedia\Glow Text\obj\Debug\Glow Text.csproj.Up2Date
+D:\Software Development\RehobothMedia\Glow Text\obj\Debug\Glow Text.exe
+D:\Software Development\RehobothMedia\Glow Text\obj\Debug\Glow Text.pdb
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\bin\Debug\Glow Text.exe.config
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\bin\Debug\Glow Text.exe
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\bin\Debug\Glow Text.pdb
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\bin\Debug\System.Management.Automation.dll
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\obj\Debug\Glow Text.csproj.AssemblyReference.cache
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\obj\Debug\Glow Text.exe.config
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\obj\Debug\Glow Text.csproj.ResolveComReference.cache
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\obj\Debug\Glow_Text.RehobothMedia.resources
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\obj\Debug\Glow_Text.Properties.Resources.resources
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\obj\Debug\Glow Text.csproj.GenerateResource.cache
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\obj\Debug\Glow Text.csproj.CoreCompileInputs.cache
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\obj\Debug\Glow Text.csproj.Up2Date
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\obj\Debug\Glow Text.exe
+D:\SoftwareDevelopment\RehobothMedia\Glow Text\obj\Debug\Glow Text.pdb

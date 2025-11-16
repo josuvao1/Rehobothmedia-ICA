@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Configuration;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Management.Automation;
+using System.Management.Automation.Runspaces;
+using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-using System.Runtime.InteropServices;
-using System.Diagnostics;
-using System.Management.Automation;
-using System.Collections.ObjectModel;
-using System.Management.Automation.Runspaces;
-using System.Configuration;
-using System.Reflection;
+using static System.Net.WebRequestMethods;
 
 namespace Glow_Text
 {
@@ -143,8 +144,9 @@ namespace Glow_Text
             var fileName = Path.GetFullPath(Path.Combine(dirPath, @"..\..\..\WebTemplate\SongLive.html"));
             fileName.Replace('\\', '/');
             fileName = ConfigurationManager.AppSettings["SongLiveMachine"];
+            fileName = "http://localhost:8081/LiveViewer.html";
             Process process = new Process();
-            process.StartInfo.FileName = @"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe";
+            process.StartInfo.FileName = @"C:\Program Files\Google\Chrome\Application\chrome.exe";
             process.StartInfo.Arguments = $"--start-fullscreen --app={fileName} --window-position=1280,0 --window-size=1280,720 ";
      //       process.StartInfo.Arguments = $"--start-fullscreen --app={ConfigurationManager.AppSettings["SongLiveMachine"]} --window-position=1280,0 --window-size=1280,720 ";
      

@@ -28,6 +28,7 @@ namespace Glow_Text
         public FileHelper fileHelper = new FileHelper();
         public List<Button> SongLyricsbuttons;
         public List<HtmlModel> FinalHtmlModels;
+        public string selectedTab = "";
         OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
         public RehobothMedia()
@@ -95,12 +96,7 @@ namespace Glow_Text
             var setColourRed = true;
             if (Presentation.Checked == true)
             {
-                MainSelector.Text = Constants.Presentation;
-                songList.AddRange(listofStanza);
-                foreach (var stanza in listofStanza)
-                {
-                    FinalHtmlModels.Add(new HtmlModel() { Lyrics = stanza, FontSize = "35px" });
-                }
+                WhenPresentationisTrue(listofStanza);
             }
             else
             {
@@ -180,6 +176,16 @@ namespace Glow_Text
             }
         }
 
+        private void WhenPresentationisTrue(List<string> listofStanza)
+        {
+            MainSelector.Text = Constants.Presentation;
+            songList.AddRange(listofStanza);
+            foreach (var stanza in listofStanza)
+            {
+                FinalHtmlModels.Add(new HtmlModel() { Lyrics = stanza, FontSize = "35px" });
+            }
+        }
+
         private void SetDropDown()
         {
             var mainList = new List<string>();
@@ -225,7 +231,7 @@ namespace Glow_Text
             }
             else if (Tabsevent.TabPage == BibleTab)
             {
-                MainSelector.Text = Constants.Bible;
+                MainSelector.Text = Presentation.Checked? Constants.MotionBible :Constants.Bible;
             }
             else if (Tabsevent.TabPage == BirthDayTab)
             {
@@ -299,13 +305,38 @@ namespace Glow_Text
 
         private void SongDropdownList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var fileName = (SongDropdownList.Text).Replace("\r\n", "");
-            fileName = Path.GetFullPath(Path.Combine(dirPath, $"..\\..\\..\\WebTemplate\\SongDataBase\\{fileName}.txt"));
-           // fileName = temp.Replace(@"Glow Text\bin\Debug", $"WebTemplate\\SongDataBase\\{fileName}.txt");
-            textBox1.Text = File.ReadAllText(fileName);
+            try
+            {
+
+
+                var fileName = (SongDropdownList.Text).Replace("\r\n", "");
+                fileName = Path.GetFullPath(Path.Combine(dirPath, $"..\\..\\..\\WebTemplate\\SongDataBase\\{fileName}.txt"));
+                // fileName = temp.Replace(@"Glow Text\bin\Debug", $"WebTemplate\\SongDataBase\\{fileName}.txt");
+                textBox1.Text = File.ReadAllText(fileName);
+            }
+            catch
+            { }
         }
 
- 
+        private void Presentation_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Tab.SelectedTab == SongTab)
+            {
+                SumbitAction();
+            }
+            else if (Tab.SelectedTab == BibleTab)
+            {
+                MainSelector.Text = Presentation.Checked ? Constants.MotionBible : Constants.Bible;
+            }
+
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+      
     }
 }
 

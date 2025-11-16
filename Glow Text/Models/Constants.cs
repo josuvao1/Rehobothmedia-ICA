@@ -24,7 +24,8 @@ namespace Glow_Text.Models
 
         public static readonly string RehobothMediaLoop = "RehobothMediaLoop";
 
-        public static readonly string Presentation = "song3";
+        public static readonly string Presentation = "Presentation";
 
+        public static readonly string MotionBible = "MotionBackgroundBible";
     }
 }
