@@ -75,6 +75,7 @@ namespace Glow_Text
             VerseCounter = VerseCounter - 1;
 
             Verse.Text = $"{VerseCounter}";
+       //     VerseCounter = Convert.ToInt32(Verse.Text);
             BibleVerse();
         }
 

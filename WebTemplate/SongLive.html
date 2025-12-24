@@ -1,185 +1,36 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Lyrics Viewer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Song Template</title>
+    <link rel="stylesheet" type="text/css" href="song4.css">
 
-<style>
-    html, body {
-        height: 100%;
-        margin: 0;
-        overflow: hidden;
-        background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-        font-family: 'Lato', sans-serif;
-    }
-
-    .wrapper {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-
-    /* STAR BACKGROUND - TRIPLED DENSITY */
-    .stars, .stars2, .stars3 {
-        position: absolute;
-        top: 0; left: 0;
-        background: transparent;
-    }
-
-    @keyframes animStar {
-        from { transform: translateY(0px); }
-        to   { transform: translateY(-2000px); }
-    }
-
-    /* Tiny stars - TRIPLED */
-    .stars {
-        width: 2px;
-        height: 2px;
-        animation: animStar 40s linear infinite;
-        box-shadow: 
-            /* Original set 1 */
-            50px 100px #fff, 80px 200px #fff, 110px 300px #fff,
-            180px 500px #fff, 240px 800px #fff, 300px 900px #fff,
-            350px 1200px #fff, 450px 600px #fff, 520px 700px #fff,
-            620px 1100px #fff, 720px 1600px #fff, 820px 1750px #fff,
-            920px 1400px #fff, 1020px 400px #fff, 1120px 1300px #fff,
-            1400px 900px #fff, 1500px 1500px #fff, 1700px 400px #fff,
-            1900px 1600px #fff,
-            /* Additional set 2 */
-            150px 250px #fff, 280px 450px #fff, 410px 650px #fff,
-            580px 850px #fff, 740px 1050px #fff, 900px 1250px #fff,
-            1050px 550px #fff, 1250px 750px #fff, 1420px 950px #fff,
-            1620px 1350px #fff, 1820px 1550px #fff, 320px 1850px #fff,
-            520px 1950px #fff, 720px 250px #fff, 920px 450px #fff,
-            1120px 650px #fff, 1320px 850px #fff, 1520px 1050px #fff,
-            1720px 1250px #fff,
-            /* Additional set 3 */
-            100px 150px #fff, 230px 350px #fff, 360px 550px #fff,
-            490px 750px #fff, 640px 950px #fff, 790px 1150px #fff,
-            940px 1350px #fff, 1090px 1550px #fff, 1240px 1750px #fff,
-            1390px 350px #fff, 1540px 650px #fff, 1690px 850px #fff,
-            1840px 1050px #fff, 270px 1250px #fff, 420px 1450px #fff,
-            570px 1650px #fff, 820px 450px #fff, 970px 750px #fff,
-            1220px 950px #fff, 1470px 1150px #fff, 1620px 550px #fff,
-            1770px 750px #fff, 1920px 950px #fff, 370px 1350px #fff,
-            620px 350px #fff, 870px 650px #fff, 1120px 850px #fff,
-            1370px 1050px #fff, 1620px 250px #fff, 1870px 450px #fff,
-            220px 650px #fff, 470px 950px #fff, 720px 1150px #fff,
-            970px 1350px #fff, 1220px 1550px #fff, 1470px 1750px #fff,
-            1720px 350px #fff, 1970px 650px #fff, 320px 850px #fff,
-            670px 1050px #fff, 920px 1250px #fff, 1170px 1450px #fff,
-            1420px 1650px #fff, 1670px 150px #fff, 1920px 350px #fff,
-            170px 1850px #fff, 520px 550px #fff, 770px 850px #fff,
-            1020px 1050px #fff, 1270px 250px #fff, 1520px 450px #fff,
-            1770px 1450px #fff, 420px 1650px #fff, 770px 1950px #fff;
-    }
-
-    /* Medium stars - TRIPLED */
-    .stars2 {
-        width: 3px;
-        height: 3px;
-        animation: animStar 80s linear infinite;
-        box-shadow:
-            /* Original set */
-            200px 800px #fff, 400px 1200px #fff, 600px 400px #fff,
-            900px 1500px #fff, 1200px 800px #fff, 1500px 300px #fff,
-            1700px 1300px #fff, 1900px 500px #fff,
-            /* Additional set 2 */
-            300px 600px #fff, 500px 1000px #fff, 700px 1400px #fff,
-            1000px 200px #fff, 1300px 1100px #fff, 1600px 700px #fff,
-            1800px 900px #fff, 350px 1600px #fff,
-            /* Additional set 3 */
-            250px 450px #fff, 450px 850px #fff, 650px 1250px #fff,
-            850px 1650px #fff, 1150px 550px #fff, 1450px 950px #fff,
-            1650px 1350px #fff, 1850px 1750px #fff;
-    }
-
-    /* Large stars - TRIPLED */
-    .stars3 {
-        width: 4px;
-        height: 4px;
-        animation: animStar 120s linear infinite;
-        box-shadow:
-            /* Original set */
-            300px 900px #fff, 700px 300px #fff, 900px 1200px #fff,
-            1300px 900px #fff, 1600px 1600px #fff,
-            /* Additional set 2 */
-            400px 600px #fff, 800px 1000px #fff, 1100px 1400px #fff,
-            1400px 400px #fff, 1700px 1300px #fff,
-            /* Additional set 3 */
-            500px 800px #fff, 600px 1500px #fff, 1000px 700px #fff,
-            1200px 1100px #fff, 1500px 500px #fff;
-    }
-
-    .stars::after, .stars2::after, .stars3::after {
-        content: "";
-        position: absolute;
-        top: 2000px;
-        width: inherit;
-        height: inherit;
-        box-shadow: inherit;
-    }
-
-    /* TEXT CONTAINER */
-    .content-wrapper {
-        position: absolute;
-        top: 7.5%;
-        left: 5%;
-        width: 90%;
-        height: 85%;
-    }
-
-    #lyricsText {
-        color: white;
-        font-weight: bold;
-        font-family: 'Bangers', cursive;
-        margin: 0;
-        padding: 0;
-        line-height: 1.3;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        text-align: center;
-        position: absolute;
-        top: 55%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-    }
-
-    .header-text {
-      display: inline-block;      /* background only around text */
-    background-color: dimgray;
-    color: #ffffff;
-    font-size: 40px;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 5px 10px;
-    }
-
-    .center-container {
-    text-align: center;         /* centers the inline-block element */
-    }
-</style>
 </head>
-
 <body>
-
-<div class="wrapper">
-    <div class="stars"></div>
-    <div class="stars2"></div>
-    <div class="stars3"></div>
-
-    <div class="content-wrapper">
-        <div class="center-container">
-    <span class="header-text">Luke 9: 30</span>
-</div>
-        <div id="lyricsText"> </span>அன்றியும் மோசே எலியா என்னும் இரண்டுபேரும் மகிமையோடே காணப்பட்டு, அவருடனே சம்பாஷணைபண்ணி,<br /><br /> </span>और देखो, मूसा और एलिय्याह, ये दो पुरूष उसके साथ बातें कर रहे थे।<br /><br /></div>
+    <div class="shadow">
+        <p><b>Pastor P.K. Thiyagaraj</b></p>
     </div>
-</div>
-
 
 </body>
-</html>
+	<script>
+        // Function to check if .shadow p has only line breaks or is empty
+        function checkShadowContent() {
+            const pElement = document.querySelector('.shadow p');
+            const content = pElement.innerHTML.trim();
+            const shadowElement = document.querySelector(".shadow");
 
+            // Check if the content is only line breaks or empty
+            if (content === '' || content === '<b><br></b>' || content === '<b></br></b>') {
+				// shadowElement.classList.add('empty-content');
+				setTimeout(() => {
+                    shadowElement.classList.add('empty-content');
+                }, 250);
+            }
+        }
+
+        // Call the function on page load
+        document.addEventListener('DOMContentLoaded', checkShadowContent);
+    </script>
+</html>
