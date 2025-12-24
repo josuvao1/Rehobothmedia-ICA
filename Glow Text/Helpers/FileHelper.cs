@@ -11,7 +11,8 @@ namespace Glow_Text.Helpers
 {
    public class FileHelper
     {
-       
+
+        private static readonly object _writeLock = new object();
         private readonly string fileLocation = Path.GetFullPath(Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), @"..\..\..\WebTemplate\"));
         private readonly string fileLocationSong = Path.GetFullPath(Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), @"..\..\..\WebTemplate\SongDataBase\")); 
        // string temp = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
@@ -65,7 +66,7 @@ namespace Glow_Text.Helpers
 
         public void SaveasHtmlForBible(HtmlModel content,string templateName)
         {
-
+            var version = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
             var fileName = Path.GetFullPath(Path.Combine(dirPath, $"..\\..\\..\\WebTemplate\\{templateName}.html"));
             //     fileName = temp.Replace(@"Glow Text\bin\Release", $"WebTemplate\\{template}.html");
             // var fileName = SwitchCase(templateName);
@@ -74,6 +75,7 @@ namespace Glow_Text.Helpers
             songTemplate = songTemplate.Replace("{{Lyrics}}", content.Lyrics);
             songTemplate = songTemplate.Replace("{{Header}}", content.Header);
             songTemplate = songTemplate.Replace("{{FontSize}}", content.FontSize);
+            songTemplate = songTemplate.Replace("{{Version}}", version.ToString());
             CreateFile(ConfigurationManager.AppSettings["SongLive"], songTemplate, "html");
         }
 
@@ -136,14 +138,32 @@ namespace Glow_Text.Helpers
 
         }
 
+        //public void CreateFile(string fileName, string songTemplate, string type)
+        //{
+        //    using (FileStream fs = new FileStream($"{fileLocation}{fileName}.{type}", FileMode.Create))
+        //    {
+        //        using (StreamWriter w = new StreamWriter(fs, Encoding.UTF8))
+        //        {
+        //            w.WriteLine(songTemplate);
+        //        }
+        //    }
+        //}
+
+
+
         public void CreateFile(string fileName, string songTemplate, string type)
         {
-            using (FileStream fs = new FileStream($"{fileLocation}{fileName}.{type}", FileMode.Create))
+            lock (_writeLock)
             {
-                using (StreamWriter w = new StreamWriter(fs, Encoding.UTF8))
-                {
-                    w.WriteLine(songTemplate);
-                }
+                var finalPath = Path.Combine(fileLocation, $"{fileName}.{type}");
+                var tempPath = finalPath + ".tmp";
+
+                File.WriteAllText(tempPath, songTemplate, Encoding.UTF8);
+
+                if (File.Exists(finalPath))
+                    File.Replace(tempPath, finalPath, null);
+                else
+                    File.Move(tempPath, finalPath);
             }
         }
 

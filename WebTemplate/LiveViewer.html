@@ -6,24 +6,39 @@
 <body id="software-live">
   <!-- <div id="software-live"></div> -->
   <script>
-    let lastContent = "";
+let isFetching = false;
+let lastVersion = 0;
 
-    function fetchContent() {
-      fetch("SongLive.html?_=" + new Date().getTime()) // prevent caching
-        .then(resp => resp.text())
-        .then(html => {
-          if (html !== lastContent) {
-            document.getElementById("software-live").innerHTML = html;
-            lastContent = html;
-              autoScale();
-			        checkShadowContent();
-    
-          }
-        })
-        .catch(err => {
-          console.error("Failed to fetch software-live content:", err);
-        });
-    }
+function getVersion(html) {
+  const m = html.match(/meta name="version" content="(\d+)"/);
+  return m ? Number(m[1]) : 0;
+}
+
+async function fetchContent() {
+  if (isFetching) return;
+  isFetching = true;
+
+  try {
+    const resp = await fetch("SongLive.html?_=" + Date.now(), { cache: "no-store" });
+    const html = await resp.text();
+
+    const v = getVersion(html);
+    if (v <= lastVersion) return;
+
+    lastVersion = v;
+
+    document.getElementById("software-live").innerHTML = html;
+    autoScale();
+    checkShadowContent();
+  } finally {
+    isFetching = false;
+  }
+}
+
+// slow this down slightly
+setInterval(fetchContent, 400);
+fetchContent();
+
 	// Function to check if .shadow p has only line breaks or is empty
 	function checkShadowContent() {
 		const pElement = document.querySelector('.shadow p');
@@ -98,6 +113,12 @@
     console.log(`Final size: ${finalSize}px (found in ${iterations} iterations)`);
 }
 
+let scaleTimeout;
+
+function safeAutoScale() {
+  clearTimeout(scaleTimeout);
+  scaleTimeout = setTimeout(autoScale, 50);
+}
 
 // window.addEventListener('load', function() {
 //     // Wait for fonts to load

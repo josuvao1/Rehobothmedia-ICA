@@ -1,36 +1,127 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+﻿<!doctype html>
+<html lang="en">
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Song Template</title>
-    <link rel="stylesheet" type="text/css" href="song4.css">
+    <meta name="version" content="1766601140459">
 
-</head>
-<body>
-    <div class="shadow">
-        <p><b>Pastor P.K. Thiyagaraj</b></p>
-    </div>
+    <title>::Welcome::</title>
+    <style>
+        body {
+            text-align: center;
+            background: #4cff00;
+            /*padding: 0;
+            margin: 0px;*/
+        }
 
-</body>
-	<script>
-        // Function to check if .shadow p has only line breaks or is empty
-        function checkShadowContent() {
-            const pElement = document.querySelector('.shadow p');
-            const content = pElement.innerHTML.trim();
-            const shadowElement = document.querySelector(".shadow");
+        /*.black-bg {
+            background: #000;
+            margin: 0px;
+            padding: 0px;
+            height: 100vh;
+        }*/
 
-            // Check if the content is only line breaks or empty
-            if (content === '' || content === '<b><br></b>' || content === '<b></br></b>') {
-				// shadowElement.classList.add('empty-content');
-				setTimeout(() => {
-                    shadowElement.classList.add('empty-content');
-                }, 250);
+        .sub-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            /*background-image: linear-gradient(to right, #6633ff, #660066);*/
+            background: linear-gradient(180deg,#4f0d6b,#6703ff,#000000);
+            /*background-image: linear-gradient(to right, #000066,#910801);*/
+            padding: 10px 35px;
+            border-radius: 30px;
+            display: inline-block;
+            font-family: "Lobster", cursive;
+        }
+
+        .content {
+            /*border-color: #ff9900;
+            border-style: solid;*/
+            font-size: 2.0rem;
+            font-weight: bold;
+            /*background: linear-gradient(to right,#000066,#dc286d);*/
+            background: linear-gradient(180deg,#4f0d6b,#6703ff,#000000);
+            padding: 10px 10px;
+            border-radius: 30px;
+            display: inline-block;
+            font-family: "Lobster", cursive;
+            box-shadow: 15px;
+            /*width: 1100px;
+            left : -900px*/
+        }
+
+        p.content {
+            margin: 0px;
+        }
+
+        .div-pd {
+            position: absolute;
+            right: 10%;
+            bottom: 6.5%;
+            left: 10%;
+            color: #fff;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 1920px) {
+        }
+
+        @media screen and (max-width: 1600px) {
+        }
+
+        @media screen and (max-width: 1440px) {
+            .sub-title {
+                font-size:1.3rem
+            }
+
+            .content {
+                font-size: 1.5rem
             }
         }
 
-        // Call the function on page load
-        document.addEventListener('DOMContentLoaded', checkShadowContent);
-    </script>
+        @media screen and (max-width: 1366px) {
+        }
+
+        @media screen and (max-width: 1200px) {
+        }
+
+        @media screen and (max-width: 1024px) {
+        }
+
+        @media screen and (max-width: 992px) {
+            .sub-title {
+                font-size: 1.9rem
+            }
+
+            .content {
+                font-size: 1.9rem
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+        }
+
+        @media screen and (max-width: 600px) {
+        }
+
+        @media screen and (max-width: 414px) {
+        }
+
+        @media screen and (max-width: 320px) {
+        }
+    </style>
+</head>
+<body>
+    <div class="black-bg">
+        <div class="div-pd">
+            <h2 class="sub-title">Genesis 1: 4</h2>
+            <br />
+            <p class="content">
+                 </span>வெளிச்சம் நல்லது என்று தேவன் கண்டார்; வெளிச்சத்தையும் இருளையும் தேவன் வெவ்வேறாகப் பிரித்தார்.<br /><br />
+            </p>
+        </div>
+    </div>
+
+</body>
 </html>

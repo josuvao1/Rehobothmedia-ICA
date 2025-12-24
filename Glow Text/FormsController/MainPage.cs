@@ -34,6 +34,10 @@ namespace Glow_Text
         public RehobothMedia()
         {
             InitializeComponent();
+
+            // Let the form see key presses before child controls
+            this.KeyPreview = true;
+            this.KeyDown += RehobothMedia_KeyDown;
         }
 
         private void RehobothMedia_Load(object sender, EventArgs e)
@@ -50,6 +54,33 @@ namespace Glow_Text
             LowerThirdVideoLibrary.DataSource = FiletoList("LowerThirdVideoLibrary");
             MainSelector.Text = Constants.Song;
             FontSize.Text = "100";
+        }
+
+        // Key handler: left = previous, right = next (only active on Bible tab)
+        private void RehobothMedia_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (Tab.SelectedTab == BibleTab)
+                {
+                    if (e.KeyCode == Keys.Right)
+                    {
+                        // trigger next verse
+                        NextVerse_Click(this, EventArgs.Empty);
+                        e.Handled = true;
+                    }
+                    else if (e.KeyCode == Keys.Left)
+                    {
+                        // trigger previous verse
+                        VersePrevious_Click(this, EventArgs.Empty);
+                        e.Handled = true;
+                    }
+                }
+            }
+            catch
+            {
+                // swallow any unexpected exceptions from handlers
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
